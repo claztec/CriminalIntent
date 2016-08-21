@@ -48,4 +48,14 @@ public class CrimeLab {
     public void addCrime(Crime crime) {
         mCrimes.add(crime);
     }
+
+    public void removeCrime(Crime crime) {
+        int length = mCrimes.size();
+        for (int i = 0; i < length; i++) {
+            if (crime.getId() == mCrimes.get(i).getId()) {
+                mCrimes.remove(i);
+                break;
+            }
+        }
+    }
 }
